@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="enda.go_warmindo.OrderActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Your Address"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addressTxt"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="333dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916">
+
+        <!-- ListRow Left sied Thumbnail image -->
+
+        <LinearLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="7dip"
+            android:padding="2dip">
+
+            <ImageView
+                android:id="@+id/list_image"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:src="@drawable/ic_shopping_cart_black_24dp" />
+        </LinearLayout>
+
+        <!-- Title Of Song -->
+
+
+        <TextView
+            android:id="@+id/prod1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Mie Goreng"
+            android:textColor="#040404"
+            android:textSize="15dip"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:id="@+id/cart_plus_minus_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/prod1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="60dip"
+                android:layout_weight="0.23"
+                android:paddingRight="5dip"
+                android:text="Rp. 5000"
+                android:textColor="#1d1d1d"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/minBtn1"
+                android:layout_width="30dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_remove_black_24dp"
+                android:onClick="minClick" />
+
+            <TextView
+                android:id="@+id/cart_product_quantity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:text="0"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/plusBtn1"
+                android:layout_width="30dp"
+                android:layout_height="32dp"
+                android:layout_weight="0.00"
+                android:background="@drawable/ic_add_black_24dp"
+                android:onClick="plusClick" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <!-- ListRow Left sied Thumbnail image -->
+
+        <LinearLayout
+            android:id="@+id/thumbnail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="7dip"
+            android:padding="2dip">
+
+            <ImageView
+                android:id="@+id/list_image2"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:src="@drawable/ic_shopping_cart_black_24dp" />
+        </LinearLayout>
+
+        <!-- Title Of Song -->
+
+
+        <TextView
+            android:id="@+id/prod2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/thumbnail2"
+            android:text="Mie Kuah Kari Ayam"
+            android:textColor="#040404"
+            android:textSize="15dip"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:id="@+id/cart_plus_minus_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/prod2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="60dip"
+                android:layout_weight="0.23"
+                android:paddingRight="5dip"
+                android:text="Rp. 6000"
+                android:textColor="#1d1d1d"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/minBtn2"
+                android:layout_width="28dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_remove_black_24dp"
+                android:onClick="minClick" />
+
+            <TextView
+                android:id="@+id/cart_product_quantity_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:text="0"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/plusBtn2"
+                android:layout_width="30dp"
+                android:layout_height="32dp"
+                android:layout_weight="0.00"
+                android:background="@drawable/ic_add_black_24dp"
+                android:onClick="plusClick" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        android:id="@+id/relativeLayout3"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <!-- ListRow Left sied Thumbnail image -->
+
+        <LinearLayout
+            android:id="@+id/thumbnail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="7dip"
+            android:padding="2dip">
+
+            <ImageView
+                android:id="@+id/list_image3"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:src="@drawable/ic_shopping_cart_black_24dp" />
+        </LinearLayout>
+
+        <!-- Title Of Song -->
+
+
+        <TextView
+            android:id="@+id/prod3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/thumbnail3"
+            android:text="Mie Kuah Soto"
+            android:textColor="#040404"
+            android:textSize="15dip"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:id="@+id/cart_plus_minus_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/prod3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/price3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="60dip"
+                android:layout_weight="0.23"
+                android:paddingRight="5dip"
+                android:text="Rp. 6000"
+                android:textColor="#1d1d1d"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/minBtn3"
+                android:layout_width="28dp"
+                android:layout_height="32dp"
+                android:layout_weight="0.00"
+                android:background="@drawable/ic_remove_black_24dp"
+                android:onClick="minClick" />
+
+            <TextView
+                android:id="@+id/cart_product_quantity_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:text="0"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/plusBtn3"
+                android:layout_width="28dp"
+                android:layout_height="32dp"
+                android:layout_weight="0.00"
+                android:background="@drawable/ic_add_black_24dp"
+                android:onClick="plusClick" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/relativeLayout4">
+
+        <!-- ListRow Left sied Thumbnail image -->
+
+        <LinearLayout
+            android:id="@+id/thumbnail4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="7dip"
+            android:padding="2dip">
+
+            <ImageView
+                android:id="@+id/list_image4"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:src="@drawable/ic_shopping_cart_black_24dp" />
+        </LinearLayout>
+
+        <!-- Title Of Song -->
+
+
+        <TextView
+            android:id="@+id/prod4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/thumbnail4"
+            android:text="Ramen Pedas"
+            android:textColor="#040404"
+            android:textSize="15dip"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:id="@+id/cart_plus_minus_layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/prod4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/price4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="60dip"
+                android:layout_weight="0.23"
+                android:paddingRight="5dip"
+                android:text="Rp. 10000"
+                android:textColor="#1d1d1d"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/minBtn4"
+                android:layout_width="28dp"
+                android:layout_height="32dp"
+                android:layout_weight="0.00"
+                android:background="@drawable/ic_remove_black_24dp"
+                android:onClick="minClick" />
+
+            <TextView
+                android:id="@+id/cart_product_quantity_tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:text="0"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/plusBtn4"
+                android:layout_width="28dp"
+                android:layout_height="32dp"
+                android:layout_weight="0.00"
+                android:background="@drawable/ic_add_black_24dp"
+                android:onClick="plusClick" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:onClick="backClick"
+        android:text="@string/btn_back"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/popBtn"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_shape2"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="orderClick"
+        android:text="Confirm Order"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89" />
+
+</android.support.constraint.ConstraintLayout>

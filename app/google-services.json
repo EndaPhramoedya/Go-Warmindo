@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "848670287612",
+    "firebase_url": "https://go-warmindo.firebaseio.com",
+    "project_id": "go-warmindo",
+    "storage_bucket": "go-warmindo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848670287612:android:e4cd8e216c5c8623",
+        "android_client_info": {
+          "package_name": "enda.go_warmindo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848670287612-22eir1a8tf1tms6lu6a5hrprfvcd5kje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "enda.go_warmindo",
+            "certificate_hash": "b18daac9a26d3eb5b94037f8ba4bc11b642887b2"
+          }
+        },
+        {
+          "client_id": "848670287612-4pasc6bq8n4j7bf6slov2rc32eoq84td.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUP0QzpvHPFOX5PBVl8TF6d55PxIF2iXo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848670287612-4pasc6bq8n4j7bf6slov2rc32eoq84td.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
